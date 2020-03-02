@@ -1,0 +1,33 @@
+@import "../../assets/styles/variable.scss";
+
+.search {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-right: 25px;
+  &__input {
+    background: none;
+    width: 0;
+    border: 0;
+    padding: 6px 0;
+    height: 44px;
+    font-size: 18px;
+    color: $white;
+    border-bottom: 2px solid;
+    outline: none;
+    transition: width ease-out 0.3s;
+    &--open {
+      width: calc(100vw - 175px);
+      padding-right: 40px;
+    }
+  }
+  &__btn {
+    position: absolute;
+    outline: none;
+    padding: 0;
+    right: 0;
+    cursor: pointer;
+    border: 0;
+    background: none;
+  }
+}

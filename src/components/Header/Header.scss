@@ -1,0 +1,22 @@
+@import "../../assets/styles/variable.scss";
+.header {
+  display: flex;
+  align-items: center;
+  padding: 8px 20px;
+  background: $secondary;
+  box-shadow: 0 3px 3px rgba($black, 0.2);
+  &__logo {
+    display: inline-block;
+  }
+  &__menu {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  &__right {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+}

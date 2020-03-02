@@ -1,0 +1,97 @@
+@import "../../assets/styles/variable.scss";
+
+.product {
+  $this: &;
+  flex: 0 1 50%;
+  border: 1px solid $gray;
+  margin: 0 -1px -1px 0;
+  &__content {
+    margin: 10px;
+  }
+  &__figure {
+    padding-top: 600px / 500px * 100%;
+    background: $gray;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+
+    transition: all ease 0.3s;
+  }
+  &__title {
+    margin: 10px 0;
+    font: 16px/24px $font-regular;
+    color: $gray-darker;
+  }
+  &__pricing {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__discounted-price {
+    font: 16px/24px $font-bold;
+  }
+  &__actual-price {
+    font: 14px/24px $font-bold;
+    text-decoration: line-through;
+    color: $gray-dark;
+  }
+  &__discount {
+    font: 14px/24px $font-bold;
+    color: $green;
+    min-height: 24px;
+  }
+  &__footer {
+    text-align: center;
+  }
+  &__btn {
+    border: 0;
+    padding: 5px 10px;
+    border-radius: 100px;
+    background: $primary;
+    color: $gray-darker;
+    font: 14px/24px $font-bold;
+    outline: none;
+    display: inline-block;
+    margin: 12px auto;
+    cursor: pointer;
+    &:hover {
+      background: lighten($primary, 5%);
+    }
+  }
+  &:hover {
+    #{$this}__image {
+      transform: scale(1.05);
+      filter: saturate(1.5);
+    }
+  }
+}
+
+@media screen and (min-width: $screen-sm-min) {
+  .product {
+    flex: 0 1 33.33%;
+  }
+}
+@media screen and (min-width: $screen-md-min) {
+  .product {
+    flex: 0 1 20%;
+  }
+}
+
+// fix for the layout break in iphone 5
+@media screen and (max-width: $screen-xs-min) {
+  .product {
+    &__pricing {
+      flex-flow: column wrap;
+    }
+  }
+}

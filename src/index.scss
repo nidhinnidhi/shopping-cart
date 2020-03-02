@@ -1,0 +1,13 @@
+@import "./assets/styles/variable.scss";
+@import "./assets/styles/font.scss";
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: $font-regular;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: $gray-light;
+}
